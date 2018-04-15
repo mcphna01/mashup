@@ -11,14 +11,22 @@
 <body>
 <h1>Mashup Project</h1>
 
-<div>
-    <label for="search">Need help understanding a term or operation? Search for related videos here!</label>
-    <input type=text class="form-control" name="search" id="search" placeholder='go fuck yourself'/>
-    <button onclick='clickedon()'>Search!</button>
+<div id="searchforvids">
+    <label for="search">Need help understanding a term or operation? Search for related videos!</label>
+    <input type=text class="form-control" name="search" id="search" placeholder='search...'/>
+    <button onclick='clickedonyt()'>Search!</button>
+    <p>If your'e not finding videos related to what you want, try being more specific with your search.</p>
 </div>
 
 <div id="vidlinks">
+</div>
 
+<br>
+
+<div id="operations">
+    <label for="operation">Enter an operation here!</label>
+    <input type=text class="form-control" name="operation" id="operation" placeholder='compute!'/>
+    <button onclick='clickedonwa()'>Go!</button>
 </div>
 
 <script src="index.js"></script>

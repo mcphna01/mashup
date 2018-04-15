@@ -3,25 +3,43 @@
 //search for youtube videos related to the search parameter
 var search=document.getElementById('search').value
 
-function clickedon(){
+function clickedonyt(){
     "use strict"
     let x=document.getElementById('vidlinks')
     x.innerHTML=''
     let search=document.getElementById('search').value
 
+    //convert string to query string
     let searchstring=convert(search)
-    console.log(searchstring, 'this will be the string used')
 
-    fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q='.concat(searchstring).concat('&type=video&key=AIzaSyBo_WaUt2mFH61G2f_nAyP0lQQkS6p3L6Q'))
+    //get data from youtube api
+    fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q='
+    	.concat(searchstring).concat('&type=video&key=AIzaSyBo_WaUt2mFH61G2f_nAyP0lQQkS6p3L6Q'))
     .then((res)=>res.json())
     .then((data)=>{
-    	console.log(data)
+    	//console.log(data)
     	let title1=data.items[0].snippet.title
     	let title2=data.items[1].snippet.title
     	let title3=data.items[2].snippet.title
     	addvidtopage(data.items[0].id.videoId, title1)
     	addvidtopage(data.items[1].id.videoId, title2)
     	addvidtopage(data.items[2].id.videoId, title3)
+    })
+
+}
+
+function clickedonwa(){
+    "use strict"
+    let search=document.getElementById('search').value
+
+    //convert string to query string
+    let searchstring=convert(search)
+
+    //get data from youtube api
+    fetch('http://www.wolframalpha.com/api/v1/spoken-json.jsp?appid=H2YH7V-9LTQTV2V9E&input='.concat(searchstring))
+    .then((res)=>res.json())
+    .then((data)=>{
+    	console.log(data)
     })
 
 }
