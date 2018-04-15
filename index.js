@@ -18,12 +18,12 @@ function clickedonyt(){
     .then((res)=>res.json())
     .then((data)=>{
     	//console.log(data)
-    	let title1=data.items[0].snippet.title
-    	let title2=data.items[1].snippet.title
-    	let title3=data.items[2].snippet.title
-    	addvidtopage(data.items[0].id.videoId, title1)
-    	addvidtopage(data.items[1].id.videoId, title2)
-    	addvidtopage(data.items[2].id.videoId, title3)
+    	for (let i=0; i<3; i++){
+    		addvidtopage(data.items[i].id.videoId, data.items[i].snippet.title)
+    	}
+    	addvidtopage(data.items[0].id.videoId, data.items[0].snippet.title)
+    	addvidtopage(data.items[1].id.videoId, data.items[1].snippet.title)
+    	addvidtopage(data.items[2].id.videoId, data.items[2].snippet.title)
     })
 
 }
