@@ -21,9 +21,6 @@ function clickedonyt(){
     	for (let i=0; i<3; i++){
     		addvidtopage(data.items[i].id.videoId, data.items[i].snippet.title)
     	}
-    	addvidtopage(data.items[0].id.videoId, data.items[0].snippet.title)
-    	addvidtopage(data.items[1].id.videoId, data.items[1].snippet.title)
-    	addvidtopage(data.items[2].id.videoId, data.items[2].snippet.title)
     })
 
 }
