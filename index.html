@@ -1,35 +1,40 @@
-<html>
+<html style="background-color:tomato;">
 
 <!--youtubeapikey= AIzaSyBo_WaUt2mFH61G2f_nAyP0lQQkS6p3L6Q -->
-<!--wolframalphaapikey= H2YH7V-9LTQTV2V9E -->
 <!--base youtube url= https://www.googleapis.com/youtube/v3 -->
 
 <head>
 <meta charset="UTF-8">
 <title>Mashup</title>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
-<h1>Mashup Project</h1>
+<h1 class="display-4" style="background-color: red">Reddit/YouTube Mashup</h1>
 
-<div id="searchforvids">
-    <label for="search">Need help understanding a term or operation? Search for related videos!</label>
-    <input type=text class="form-control" name="search" id="search" placeholder='search...'/>
-    <button onclick='clickedonyt()'>Search!</button>
-    <p>If your'e not finding videos related to what you want, try being more specific with your search.</p>
-</div>
-
-<div id="vidlinks">
+<div id="searchtopic">
+    <label for="search">Search for help via subreddits, pages, and all that jazz, plus some youtube.</label><br><br>
+    <input type=text name="search" id="search" placeholder='search...' style="text-align:center"/>
+    <button class="btn btn-warning" onclick='clickedon()'>Search!</button>
 </div>
 
 <br>
 
-<div id="operations">
-    <label for="operation">Enter an operation here!</label>
-    <input type=text class="form-control" name="operation" id="operation" placeholder='compute!'/>
-    <button onclick='clickedonwa()'>Go!</button>
+<div class="row" id="vidlinks">
 </div>
 
-<script src="index.js"></script>
+<br>
+
+<div id="redlinks">
+</div>
+
+<br>
+
+
+
+<script src="test.js"></script>
 
 </body>
 </html>
